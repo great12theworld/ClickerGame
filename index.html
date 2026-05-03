@@ -7,6 +7,9 @@
     <title>Document Title</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -16,6 +19,9 @@
             <button onclick="ClickCounter();" type="button" class="btn btn-danger btn-lg p-4 fw-bold">
                 CLICK ME
             </button>
+            <div id="clicks" class="text-center p-4 me-3 border border-white" style="text-align: center;">
+                0
+            </div>
         </div>
 
 <!-- sidebar for upgrades -->
@@ -24,13 +30,27 @@
                 Buy Clicker 
                 <p id="clickerUpgrade"></p>
             </button>
+            <button onclick="addClicker2()">  <!-- clicker upgrade -->
+                Buy Mouse Spam 
+                <p id="clickerUpgrade2"></p>
+            </button>
         </div>
+
+
+        <div class="sidebarleft">
+            <button onclick="clickUpgrade()">  <!-- click upgrade -->
+                Buy Click Upgrade
+                
+            </button>
+            <p id="clickUpgrade"></p>
+        </div>
+
+        <!-- sidebar ends   -->
         <button onclick="changeBackgroundCustom()" id="colorChange" class="btn btn-primary">
             Change Background Color
         </button>
-        <div id="clicks" class="text-center p-4 me-3"class= "border border-white" style="text-align: center;">
-            0
-        </div>
+
+        
     </div>
     <script src="script.js"></script>
 </body>
