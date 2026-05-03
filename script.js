@@ -5,13 +5,15 @@ let clickLevel = 1; //indicative of amount of clicks per second
 
 let clickerUpgrade = 0; //indicative of base upgrade count
 let clickerUpgrade1Price = 10; //indicative of price for next upgrade, grows per upgrade
-
+let clickerUpgrade2 = 0; //indicative of upgrade2 count
+let clickerUpgrade2Price = 75; //indicative of price for next upgrade, grows per upgrade
 
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 function updateUI() {
     document.getElementById("clicks").innerHTML = clicks;
     document.getElementById("clickerUpgrade").innerHTML = "Price: " + clickerUpgrade1Price + " Count: " + clickerUpgrade;
+    //document.getElementById("clickerUpgrade2").innerHTML = "Price: " + clickerUpgrade2Price + " Count: " + clickerUpgrade2;
 }
 
 // basic counting for clicker
@@ -28,7 +30,7 @@ function addClicker() {
     if (clicks >= clickerUpgrade1Price) {
         clicks -= clickerUpgrade1Price;
         clickerUpgrade += 1;
-        clickerUpgrade1Price = exponentialPriceGrowth(clickerUpgrade1Price, 1.15); // Increase price for next upgrade
+        clickerUpgrade1Price = exponentialPriceGrowth(clickerUpgrade1Price, 1.1); // Increase price for next upgrade
         updateUI();
         updateClickCountUpgrade1(); // runs the clicker made in the background
     }
@@ -36,9 +38,15 @@ function addClicker() {
 
 async function updateClickCountUpgrade1() {
     while (true) {
-    await sleep(1000);
-    clicks += 1
-    updateUI();
+        await sleep(1000);
+        clicks += 1;
+        updateUI();
     }
     
+}
+
+function changeBackgroundCustom() {
+    let customColor = prompt("Enter a custom color (e.g., 'purple' or '#800080'):");
+    document.body.style.backgroundColor = customColor;
+    updateUI();
 }
