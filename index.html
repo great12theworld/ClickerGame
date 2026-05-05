@@ -16,8 +16,8 @@
     <div class="d-flex flex-column gap-3 justify-content-center align-items-center" style="height: 100vh;">    
         
         <div class="justify-content-center align-items-center me-3 border border-white" style="text-align: center;">
-            <button onclick="ClickCounter();" type="button" class="btn btn-danger btn-lg p-4 fw-bold">
-                CLICK ME
+            <button id="clickButton" onclick="ClickCounter();" type="button" class="btn btn-danger btn-lg p-4 fw-bold">
+                click?
             </button>
             <div id="clicks" class="text-center p-4 me-3 border border-white" style="text-align: center;">
                 0
@@ -34,19 +34,37 @@
                 Buy Mouse Spam 
                 <p id="clickerUpgrade2"></p>
             </button>
+            <button onclick="addClicker3()">  <!-- clicker upgrade -->
+                Buy Auto Clicker 
+                <p id="clickerUpgrade3"></p>
+            </button>
+            <button onclick="addClicker4()">  <!-- click upgrade -->
+                Buy Click Server
+                <p id="clickerUpgrade4"></p>
+            </button>
+        </div>
+
+        <!-- sidebar for upgrades on rightside -->
+
+        <div class="sidebar-right">
+            <button onclick="buyEnhancement1()">  <!-- auto multiplier upgrade -->
+                Buy Multiplier for 750
+                <p id="enhancement1"></p>
+            </button>
         </div>
 
 
-        <div class="sidebarleft">
+
+        <!-- button for click upgrade -->
+        <div>
             <button onclick="clickUpgrade()">  <!-- click upgrade -->
                 Buy Click Upgrade
-                
             </button>
             <p id="clickUpgrade"></p>
-        </div>
+        </div>  
 
         <!-- sidebar ends   -->
-        <button onclick="changeBackgroundCustom()" id="colorChange" class="btn btn-primary">
+        <button id = "colorChange" onclick="changeBackgroundCustom()" class="btn btn-primary">
             Change Background Color
         </button>
 
