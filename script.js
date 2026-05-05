@@ -85,7 +85,7 @@ function buyEnhancement1(){ //increases all clicks by 10%
     if (clicks >= 750) {
         clicks -= 750;
         enhancement1bought = true;
-        totalPercentAddition += 0.1; // Increase total percent addition by 10%
+        totalPercentAddition += 0.2; // Increase total percent addition by 10%
         updateUI();
     }
 }
