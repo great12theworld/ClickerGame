@@ -1,6 +1,6 @@
 let totalPercentAddition = 1; //for multiplier upgrades, this is the total percent increase to clicks per click, starts at 1 for 100% of base clicks per click
 
-let clicks = 1000; //total click count right now
+let clicks = 0; //total click count right now
 
 let cps = 0;//clicks per second, 
 
